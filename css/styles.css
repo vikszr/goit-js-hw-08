@@ -22,14 +22,14 @@ body {
   height: 200px;
 }
 
-.gallery-image:hover {
-  width: 376px;
-  height: 208px;
-  transform: scale(1.1);
-}
-
 .gallery-image {
   width: 360px;
   height: 200px;
   transition: transform 0.2s;
+}
+
+.gallery-image:hover {
+  width: 376px;
+  height: 208px;
+  transform: scale(1.1);
 }
