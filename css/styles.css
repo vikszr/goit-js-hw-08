@@ -14,7 +14,7 @@ body {
   list-style: none;
   padding-left: 0;
   margin: 0 auto;
-  max-width: 1128px;
+  max-width: 1176px;
   justify-content: center;
 }
 
@@ -22,7 +22,14 @@ body {
   height: 200px;
 }
 
+.gallery-image:hover {
+  width: 376px;
+  height: 208px;
+  transform: scale(1.1);
+}
+
 .gallery-image {
   width: 360px;
   height: 200px;
+  transition: transform 0.2s;
 }
