@@ -1,5 +1,3 @@
-// import * as basicLightbox from "basicLightbox";
-
 const images = [
   {
     preview:
