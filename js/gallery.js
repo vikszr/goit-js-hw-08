@@ -83,16 +83,18 @@ const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("afterbegin", imagesHtml);
 
-const links = document.querySelectorAll(".gallery-link");
+gallery.addEventListener("click", function (event) {
+  event.preventDefault();
 
-links.forEach((link) =>
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-    console.log(link.href);
+  const clickedLink = event.target.closest(".gallery-link");
+  if (!clickedLink) return;
 
-    const instance = basicLightbox.create(`
-    <img src="${link.href}" width="1112" height="640">`);
+  const imageSrc = clickedLink.href;
+  console.log(imageSrc);
 
-    instance.show();
-  })
-);
+  const instance = basicLightbox.create(`
+    <img src="${imageSrc}" width="1112" height="640">
+  `);
+
+  instance.show();
+});
